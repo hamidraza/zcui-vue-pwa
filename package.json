@@ -1,7 +1,7 @@
 {
-  "name": "zcui-vue",
+  "name": "zcui-vue-pwa",
   "version": "1.0.0",
-  "description": "Vuejs varient for zcui projects.",
+  "description": "Vuejs varient for zcui projects with PWA support.",
   "config": {
     "src": "./src"
   },
