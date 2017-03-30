@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="minimum-scale=1.0, width=device-width, height=device-height, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>ZCUI Vuejs PWA</title>
+
+  <% if(htmlWebpackPlugin.options.env.NODE_ENV == 'production') { %>
+  <link href="//cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,fetch"></script>
+  <% } %>
+
+  <script>
+  navigator.serviceWorker && navigator.serviceWorker.register('/sw.js', {scope: './'})
+    .then(function(r) {})
+    .catch(function() {});
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>

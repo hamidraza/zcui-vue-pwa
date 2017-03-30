@@ -1,0 +1,16 @@
+{
+  "short_name": "ZCUI",
+  "name": "ZCUI PWA App",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#323a44",
+  "background_color": "#ccc",
+  "orientation": "portrait",
+  "display": "standalone"
+}
