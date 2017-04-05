@@ -16,13 +16,11 @@
     "production": "npm run prod",
     "analyze:state": "webpack --profile --json > ./public/build/analyze.json",
     "analyze:server": "webpack-bundle-analyzer ./public/build/analyze.json -m server",
-    "analyze": "npm-run-all analyze:*"
+    "analyze": "npm-run-all analyze:*",
+    "precommit": "npm-run-all test:flow test:lint",
+    "prepush": "npm run test",
+    "commitmsg": "validate-commit-msg"
   },
-  "pre-commit": [
-    "flow",
-    "lint",
-    "test"
-  ],
   "keywords": [
     "zcui",
     "vuejs"
@@ -53,11 +51,14 @@
     "file-loader": "^0.10.1",
     "flow-bin": "^0.42.0",
     "html-webpack-plugin": "^2.28.0",
+    "husky": "^0.13.3",
     "jest": "^19.0.2",
     "node-sass": "^4.5.0",
     "npm-run-all": "^4.0.2",
+    "preload-webpack-plugin": "^1.2.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.14.1",
+    "validate-commit-msg": "^2.12.1",
     "vue": "^2.2.4",
     "vue-head": "^2.0.10",
     "vue-loader": "^11.1.4",
