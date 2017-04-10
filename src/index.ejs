@@ -18,6 +18,10 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,fetch"></script>
   <% } %>
 
+  <% if (htmlWebpackPlugin.options.env.NODE_ENV == 'development') { %>
+    <link href="/css/material_icons.css" rel="stylesheet">
+  <% } %>
+
   <script>
   navigator.serviceWorker && navigator.serviceWorker.register('/build/sw.js', {scope: './'})
     .then(function() {})
