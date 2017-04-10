@@ -59,6 +59,7 @@
     "preload-webpack-plugin": "^1.2.2",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.14.1",
+    "sw-precache-webpack-plugin": "^0.9.1",
     "validate-commit-msg": "^2.12.1",
     "vue": "^2.2.4",
     "vue-head": "^2.0.10",

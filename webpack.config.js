@@ -5,6 +5,8 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+
 const ENV = process.env.NODE_ENV;
 const pkgJson = require('./package.json');
 
@@ -127,5 +129,25 @@ if(ENV == 'production') {
 }
 
 
-module.exports = webpackConfig;
+webpackConfig.plugins.push(
+  new SWPrecacheWebpackPlugin({
+    cacheId: pkgJson.name,
+    filepath: path.join(__dirname, '/public/sw.js'),
+    maximumFileSizeToCacheInBytes: 4194304,
+    minify: ENV == 'production',
+    /*runtimeCaching: [{
+      urlPattern: new RegExp('https://api.zoomcar.com/'),
+      handler: 'networkFirst'
+    }],*/
+    staticFileGlobs: [
+      './public/index.html',
+      './public/{img,css,js,fav}/*.*',
+      './public/build/*.*'
+    ],
+    stripPrefix: './public',
+    navigateFallback: '/index.html'
+  })
+);
 
+
+module.exports = webpackConfig;

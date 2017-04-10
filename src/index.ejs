@@ -23,11 +23,7 @@
     <link href="/css/material_icons.css" rel="stylesheet">
   <% } %>
 
-  <script>
-  navigator.serviceWorker && navigator.serviceWorker.register('/build/sw.js', {scope: './'})
-    .then(function() {})
-    .catch(function() {});
-  </script>
+  <script src="/js/sw-registration.js"></script>
 </head>
 <body>
   <div id="app"></div>
