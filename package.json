@@ -35,6 +35,7 @@
   "homepage": "http://zcui.zoomcar.com",
   "author": "Hamid Raza <hamid.raza@zoomcar.com>",
   "license": "MIT",
+  "trackingCode": "UA-XXXXXXXX-X",
   "dependencies": {
     "babel-core": "^6.24.0",
     "babel-eslint": "^7.2.1",

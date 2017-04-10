@@ -6,6 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const ENV = process.env.NODE_ENV;
+const pkgJson = require('./package.json');
 
 const webpackConfig = {
   entry: {
@@ -65,6 +66,7 @@ const webpackConfig = {
       template       : './src/index.ejs',
       filename       : ENV == 'production' ? '../index.html': 'index.html',
       env            : process.env,
+      pkg            : pkgJson,
       chunksSortMode(a, b) {
         const order = ['app', 'common', 'vendor', 'lib'];
         return order.indexOf(b.names[0]) - order.indexOf(a.names[0]);
