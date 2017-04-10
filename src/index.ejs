@@ -6,12 +6,18 @@
   <meta name="viewport" content="minimum-scale=1.0, width=device-width, height=device-height, maximum-scale=1, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <title>ZCUI Vuejs PWA</title>
+  <title>VueJs-PWA | ZCUI</title>
+
+  <link rel="dns-prefetch" href="https://cdn.materialdesignicons.com" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://cdn.polyfill.io" />
+
   <% if(htmlWebpackPlugin.options.env.NODE_ENV == 'production') { %>
-  <link href="//cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-  <script src="//cdn.polyfill.io/v2/polyfill.js?features=default,fetch"></script>
+    <link href="https://cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,fetch"></script>
   <% } %>
+
   <script>
   navigator.serviceWorker && navigator.serviceWorker.register('/build/sw.js', {scope: './'})
     .then(function() {})
