@@ -4,6 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const ENV = process.env.NODE_ENV;
 
 const webpackConfig = {
@@ -68,6 +69,9 @@ const webpackConfig = {
         const order = ['app', 'common', 'vendor', 'lib'];
         return order.indexOf(b.names[0]) - order.indexOf(a.names[0]);
       }
+    }),
+    new PreloadWebpackPlugin({
+      include: ['app', 'common', 'vendor', 'lib']
     })
   ],
   devtool: (ENV === 'development') ? 'source-map' : false
