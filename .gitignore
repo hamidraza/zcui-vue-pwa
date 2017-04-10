@@ -38,4 +38,5 @@ jspm_packages
 
 public/build/
 public/index.html
+public/sw.js
 .env
