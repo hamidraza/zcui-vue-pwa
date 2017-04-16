@@ -14,7 +14,7 @@ const webpackConfig = {
   entry: {
     app    : '~/app',
     //lib    : [],
-    vendor : ['vue', 'vuex'],
+    vendor : ['vue', 'vuex', 'vue-router', 'vue-head'],
     //common : [],
   },
   output: {
