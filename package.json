@@ -14,7 +14,7 @@
     "test:jest": "jest $npm_package_config_src --coverage",
     "development": "npm run dev",
     "production": "npm run prod",
-    "analyze:state": "webpack --profile --json > ./public/build/analyze.json",
+    "analyze:state": "cross-env NODE_ENV=production BABEL_ENV=production webpack --profile --json > ./public/build/analyze.json",
     "analyze:server": "webpack-bundle-analyzer ./public/build/analyze.json -m server",
     "analyze": "npm-run-all analyze:*",
     "precommit": "npm-run-all test:flow test:lint",
