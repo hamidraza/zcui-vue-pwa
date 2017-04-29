@@ -9,6 +9,8 @@
 
 #### Installation
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hamidraza/zcui-vue-pwa.svg)](https://greenkeeper.io/)
+
 ``` bash
 $ npm install --global zcui
 $ zcui init HelloWorld --target vue-pwa
