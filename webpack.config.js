@@ -6,6 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 const ENV = process.env.NODE_ENV;
 const pkgJson = require('./package.json');
@@ -76,7 +77,8 @@ const webpackConfig = {
     }),
     new PreloadWebpackPlugin({
       include: ['app', 'common', 'vendor', 'lib']
-    })
+    }),
+    new FriendlyErrorsWebpackPlugin()
   ],
   devtool: (ENV === 'development') ? 'source-map' : false
 };
