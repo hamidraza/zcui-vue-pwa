@@ -70,7 +70,7 @@
     "vue-template-compiler": "^2.3.0",
     "vuex": "^2.3.1",
     "webpack": "^2.4.1",
-    "webpack-bundle-analyzer": "^2.4.0",
+    "webpack-bundle-analyzer": "^2.7.0",
     "webpack-dev-server": "^2.4.5"
   },
   "engines": {
