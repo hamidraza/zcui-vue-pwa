@@ -19,7 +19,9 @@
     "analyze": "npm-run-all analyze:*",
     "precommit": "npm-run-all test:flow test:lint",
     "prepush": "npm run test",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "zcui",
@@ -71,12 +73,14 @@
     "vuex": "^2.3.1",
     "webpack": "^2.4.1",
     "webpack-bundle-analyzer": "^2.4.0",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.4.5",
+    "snyk": "^1.30.0"
   },
   "engines": {
     "node": ">= 6.0.0"
   },
   "zcui": {
     "variant": "vue-pwa"
-  }
+  },
+  "snyk": true
 }
