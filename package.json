@@ -61,6 +61,7 @@
     "npm-run-all": "^4.0.2",
     "preload-webpack-plugin": "^2.0.0",
     "sass-loader": "^6.0.3",
+    "snyk": "^1.31.0",
     "style-loader": "^0.19.1",
     "sw-precache-webpack-plugin": "^0.11.0",
     "validate-commit-msg": "^2.12.1",
@@ -73,8 +74,7 @@
     "vuex": "^3.0.1",
     "webpack": "^3.0.0",
     "webpack-bundle-analyzer": "^2.4.0",
-    "webpack-dev-server": "^2.4.5",
-    "snyk": "^1.31.0"
+    "webpack-dev-server": "^2.4.5"
   },
   "engines": {
     "node": ">= 6.0.0"
@@ -82,5 +82,8 @@
   "zcui": {
     "variant": "vue-pwa"
   },
-  "snyk": true
+  "snyk": true,
+  "devDependencies": {
+    "lighthouse-ci": "https://github.com/ebidel/lighthouse-ci"
+  }
 }
