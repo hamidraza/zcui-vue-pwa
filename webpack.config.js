@@ -11,6 +11,8 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const ENV = process.env.NODE_ENV;
 const pkgJson = require('./package.json');
 
+const PUBLIC_PATH = process.env.PUBLIC_PATH + '/build/';
+
 const webpackConfig = {
   entry: {
     app    : '~/app',
@@ -20,7 +22,6 @@ const webpackConfig = {
   },
   output: {
     path: path.resolve(__dirname, 'public/build'),
-    publicPath: `${process.env.PUBLIC_PATH || ''}/build/`,
     chunkFilename: '[name]-[chunkhash].chunk.js',
     filename: '[name]-bundle.js',
   },
@@ -116,7 +117,7 @@ if(ENV == 'development') {
 // WP Config for production environment
 **/
 if(ENV == 'production') {
-  webpackConfig.output.publicPath = '/build/';
+  webpackConfig.output.publicPath = PUBLIC_PATH;
   webpackConfig.module.rules.push(...[{
     test: /\.scss$/,
     exclude: /node_modules/,
