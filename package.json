@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Vuejs varient for zcui projects with PWA support.",
   "config": {
-    "src": "./src"
+    "src": "./src",
+    "public": "./public"
   },
   "scripts": {
     "test": "npm-run-all test:*",
     "dev": "cross-env NODE_ENV=development BABEL_ENV=development webpack-dev-server",
-    "prod": "cross-env NODE_ENV=production BABEL_ENV=production webpack -p",
+    "clean": "rm -rf $npm_package_config_public/build/*",
+    "prod": "npm run clean && cross-env NODE_ENV=production BABEL_ENV=production webpack -p",
     "test:flow": "flow $npm_package_config_src",
     "test:lint": "eslint $npm_package_config_src",
     "test:jest": "jest $npm_package_config_src --coverage",
