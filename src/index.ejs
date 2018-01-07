@@ -23,7 +23,7 @@
     <link href="/css/material_icons.css" rel="stylesheet">
   <% } %>
 
-  <script src="<%= htmlWebpackPlugin.options.env.PUBLIC_PATH %>/js/sw-registration.js"></script>
+  <script>navigator.serviceWorker&&navigator.serviceWorker.register("<%= htmlWebpackPlugin.options.env.SW_SCOPE %>/sw.js").then(function(){}).catch(function(){})</script>
 </head>
 <body>
   <div id="app"></div>
