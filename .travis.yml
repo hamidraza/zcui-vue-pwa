@@ -4,3 +4,14 @@ node_js:
 cache:
   directories:
     - node_modules
+before_deploy:
+  - npm run prod
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: public
+  github_url: https://hamidraza.github.io/zcui-vue-pwa/
+  on:
+    branch: master
+
