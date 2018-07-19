@@ -11,6 +11,9 @@ patch:
   'npm:ms:20170412':
     - webpack-dev-server > compression > debug > ms:
         patched: '2017-05-27T06:51:16.980Z'
+  'npm:tunnel-agent:20170305':
+    - node-sass > request > tunnel-agent:
+        patched: '2018-06-30T03:45:49.255Z'
   'npm:hoek:20180212':
     - node-sass > request > hawk > hoek:
         patched: '2018-06-23T03:45:26.646Z'
