@@ -23,7 +23,8 @@
     "prepush": "npm run test",
     "commitmsg": "validate-commit-msg",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "zcui",
@@ -63,7 +64,7 @@
     "npm-run-all": "^4.0.2",
     "preload-webpack-plugin": "^2.0.0",
     "sass-loader": "^7.0.3",
-    "snyk": "^1.31.0",
+    "snyk": "^1.83.0",
     "style-loader": "^0.21.0",
     "sw-precache-webpack-plugin": "^0.11.0",
     "validate-commit-msg": "^2.12.1",
