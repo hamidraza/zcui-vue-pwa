@@ -1,10 +1,12 @@
 /* @flow */
+import welcome from '~/components/zc-welcome';
 
 export default {
   name: 'page-home',
-  components: {},
+  components: {
+    welcome
+  },
   data() {
     return {}
   }
 }
-
