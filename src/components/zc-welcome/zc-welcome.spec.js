@@ -1,5 +1,18 @@
-import ZcWelcome from './zc-welcome';
+import { mount } from '@vue/test-utils'
+import ZcWelcome from './zc-welcome.vue';
 
-test('ZcWelcome name', () => {
-  expect(ZcWelcome.name).toBe('zc-welcome');
+describe('ZcWelcome', () => {
+  let cmp;
+
+  beforeEach(() => {
+    cmp = mount(ZcWelcome, {
+      propsData: {}
+    });
+  });
+
+  it('has welcome message', () => {
+    expect(cmp.vm.message).toBe('Welcome!');
+  });
+
 });
+

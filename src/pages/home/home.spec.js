@@ -1,6 +1,18 @@
-import HomePage from './home';
+import { mount } from '@vue/test-utils'
+import HomePage from './home.vue';
 
-test('HomePage name', () => {
-  expect(HomePage.name).toBe('page-home');
+describe('HomePage', () => {
+  let cmp;
+
+  beforeEach(() => {
+    cmp = mount(HomePage, {
+      propsData: {}
+    });
+  });
+
+  it('has welcome message', () => {
+    expect(cmp.vm.welcomeMsg).toBe('ZcUI');
+  });
+
 });
 
