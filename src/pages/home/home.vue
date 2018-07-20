@@ -1,6 +1,6 @@
 <template>
   <div class="page page-home">
-    <welcome />
+    <welcome :message='welcomeMsg' />
   </div>
 </template>
 

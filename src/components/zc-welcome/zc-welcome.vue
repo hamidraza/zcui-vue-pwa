@@ -1,6 +1,6 @@
 <template>
   <div class="component-zc-welcome">
-    <h1>ZcUI</h1>
+    <h1>{{message}}</h1>
   </div>
 </template>
 

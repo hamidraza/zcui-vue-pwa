@@ -7,6 +7,9 @@ export default {
     welcome
   },
   data() {
-    return {}
-  }
+    return {
+      welcomeMsg: 'ZcUI',
+    };
+  },
 }
+
