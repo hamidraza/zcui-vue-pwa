@@ -87,11 +87,9 @@
   "engines": {
     "node": ">= 8.11.3"
   },
-  "zcui": {
-    "variant": "vue-pwa"
-  },
   "snyk": true,
   "devDependencies": {
     "lighthouse-ci": "https://github.com/ebidel/lighthouse-ci"
   }
 }
+
