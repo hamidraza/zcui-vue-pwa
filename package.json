@@ -1,6 +1,6 @@
 {
   "name": "zcui-vue-pwa",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Vuejs varient for zcui projects with PWA support.",
   "config": {
     "src": "./src",
@@ -92,4 +92,3 @@
     "lighthouse-ci": "https://github.com/ebidel/lighthouse-ci"
   }
 }
-
