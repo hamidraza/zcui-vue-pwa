@@ -1,16 +1,10 @@
+sudo: false
 language: node_js
 node_js:
-  - "8"
+  - "8.11.3"
+git:
+  depth: 1
+cache: yarn
 cache:
   directories:
     - node_modules
-before_deploy:
-  - npm run prod
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: public
-  on:
-    branch: master
-
