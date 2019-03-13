@@ -53,7 +53,7 @@
     "coveralls": "^3.0.2",
     "cross-env": "^5.0.0",
     "css-loader": "^1.0.0",
-    "dotenv": "^6.0.0",
+    "dotenv": "^7.0.0",
     "eslint": "^5.0.1",
     "eslint-plugin-flowtype": "^2.32.1",
     "file-loader": "^1.1.6",
